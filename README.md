@@ -8,7 +8,7 @@ An OSC-based remote control FM synthesizer based on Wekinator
 
 There are 5 parameters to be affected in the output FM synthesizer, including the frequency of carrier, cutoff of the low pass filter, gain of the carrier, frequency of the modulator, and depth of the modulation. Based on the connection map of my model, I chose different algorithms for different outputs. Basically, if the output is connected to several inputs, I tend to choose neural network to train the models and try different layers and nodes within them. This could generate a more complex model to change the output in a subtle way. And some of output parameters are only linked to one input, in such case I would like to try the polynomial regression algorithm and choose different order based on the complexity of the trend. As a result, this offers a more accurate control to the desired parameters.
 
-BTW, shake it hard, and you will get the best damn sound. 
+BTW, **shake it hard**, and you will get the best damn sound. 
 
 -------
 
