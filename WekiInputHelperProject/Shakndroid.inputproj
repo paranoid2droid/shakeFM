@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<WekiInputHelperFileData>
+  <oscReceivePort>6448</oscReceivePort>
+  <oscSendPort>6449</oscSendPort>
+  <sendHostname>localhost</sendHostname>
+  <sendOscMessage>/wek/inputs</sendOscMessage>
+  <inputs>
+    <oscMessage>/accxyz</oscMessage>
+    <numInputs>3</numInputs>
+    <groupName>Inputs</groupName>
+    <inputNames>
+      <string>accxyz_1</string>
+      <string>accxyz_2</string>
+      <string>accxyz_3</string>
+    </inputNames>
+  </inputs>
+  <outputs>
+    <outputs class="linked-list">
+      <wekiinputhelper.Modifiers.WindowedOperation>
+        <name>accxyz_1_Max10</name>
+        <index>0</index>
+        <windowSize>10</windowSize>
+        <op class="wekiinputhelper.Modifiers.MaxWindowOperation"/>
+      </wekiinputhelper.Modifiers.WindowedOperation>
+      <wekiinputhelper.Modifiers.WindowedOperation>
+        <name>accxyz_2_Max10</name>
+        <index>1</index>
+        <windowSize>10</windowSize>
+        <op class="wekiinputhelper.Modifiers.MaxWindowOperation"/>
+      </wekiinputhelper.Modifiers.WindowedOperation>
+      <wekiinputhelper.Modifiers.ExpressionInput>
+        <name>accxyz_3</name>
+        <expression class="expr.Variable">
+          <variablesUsed>
+            <string>accxyz_3</string>
+          </variablesUsed>
+          <name>accxyz_3</name>
+          <val>-0.992523193359375</val>
+        </expression>
+        <variables>
+          <expr.Variable reference="../../expression"/>
+        </variables>
+        <indexedVariables>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>accxyz_3</originalVariable>
+            <unindexedName>accxyz_3</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+        </indexedVariables>
+        <indexes>
+          <int>2</int>
+        </indexes>
+        <originalString>accxyz_3</originalString>
+        <buffersForInputs>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+        </buffersForInputs>
+      </wekiinputhelper.Modifiers.ExpressionInput>
+      <wekiinputhelper.Modifiers.ExpressionInput>
+        <name>sqrt</name>
+        <expression class="expr.UnaryExpr">
+          <variablesUsed>
+            <string>accxyz_3</string>
+            <string>accxyz_1</string>
+            <string>accxyz_2</string>
+          </variablesUsed>
+          <rator>112</rator>
+          <rand class="expr.BinaryExpr">
+            <rator>0</rator>
+            <rand0 class="expr.BinaryExpr">
+              <rator>0</rator>
+              <rand0 class="expr.BinaryExpr">
+                <rator>4</rator>
+                <rand0 class="expr.Variable">
+                  <name>accxyz_1</name>
+                  <val>0.029815673828125</val>
+                </rand0>
+                <rand1 class="expr.LiteralExpr">
+                  <v>2.0</v>
+                </rand1>
+              </rand0>
+              <rand1 class="expr.BinaryExpr">
+                <rator>4</rator>
+                <rand0 class="expr.Variable">
+                  <name>accxyz_2</name>
+                  <val>-0.0062255859375</val>
+                </rand0>
+                <rand1 class="expr.LiteralExpr">
+                  <v>2.0</v>
+                </rand1>
+              </rand1>
+            </rand0>
+            <rand1 class="expr.BinaryExpr">
+              <rator>4</rator>
+              <rand0 class="expr.Variable" reference="../../../../../wekiinputhelper.Modifiers.ExpressionInput/expression"/>
+              <rand1 class="expr.LiteralExpr">
+                <v>2.0</v>
+              </rand1>
+            </rand1>
+          </rand>
+        </expression>
+        <variables>
+          <expr.Variable reference="../../../wekiinputhelper.Modifiers.ExpressionInput/expression"/>
+          <expr.Variable reference="../../expression/rand/rand0/rand0/rand0"/>
+          <expr.Variable reference="../../expression/rand/rand0/rand1/rand0"/>
+        </variables>
+        <indexedVariables>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>accxyz_3</originalVariable>
+            <unindexedName>accxyz_3</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>accxyz_1</originalVariable>
+            <unindexedName>accxyz_1</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+          <wekiinputhelper.Modifiers.IndexedVar>
+            <originalVariable>accxyz_2</originalVariable>
+            <unindexedName>accxyz_2</unindexedName>
+            <delay>0</delay>
+          </wekiinputhelper.Modifiers.IndexedVar>
+        </indexedVariables>
+        <indexes>
+          <int>2</int>
+          <int>0</int>
+          <int>1</int>
+        </indexes>
+        <originalString>sqrt(accxyz_1^2+accxyz_2^2+accxyz_3^2)</originalString>
+        <buffersForInputs>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+          <wekiinputhelper.Modifiers.CircularBuffer>
+            <length>1</length>
+          </wekiinputhelper.Modifiers.CircularBuffer>
+        </buffersForInputs>
+      </wekiinputhelper.Modifiers.ExpressionInput>
+      <wekiinputhelper.Modifiers.WindowedOperation>
+        <name>accxyz_3_StdDev10</name>
+        <index>2</index>
+        <windowSize>10</windowSize>
+        <op class="wekiinputhelper.Modifiers.StdDevWindowOperation"/>
+      </wekiinputhelper.Modifiers.WindowedOperation>
+    </outputs>
+    <numOutputTypes>5</numOutputTypes>
+    <dimensionality>5</dimensionality>
+    <hasDependencies>false</hasDependencies>
+  </outputs>
+  <inputTriggerer class="wekiinputhelper.TriggerOnReceive">
+    <c>
+      <type>NONE</type>
+      <howLong>ONCE</howLong>
+      <index>0</index>
+      <val>0.0</val>
+      <appliesTo>INPUT</appliesTo>
+    </c>
+  </inputTriggerer>
+  <isSendingOriginalInputs>false</isSendingOriginalInputs>
+</WekiInputHelperFileData>
