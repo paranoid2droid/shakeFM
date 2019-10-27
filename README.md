@@ -2,6 +2,8 @@
 
 An OSC-based remote control FM synthesizer based on Wekinator
 
+**See video demo [here](https://youtu.be/rLEmL9Iut3o).**
+
 -------
 
 ## Introduction
